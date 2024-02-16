@@ -11,8 +11,8 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from Love import app
-from config import OWNER_ID
-
+from config import OWNER_ID, EVALOP
+###########
 
 async def aexec(code, client, message):
     exec(
