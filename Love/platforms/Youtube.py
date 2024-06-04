@@ -9,8 +9,8 @@ from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
 from youtubesearchpython.__future__ import VideosSearch
 
-from Love.utils.database import is_on_off
-from Love.utils.formatters import time_to_seconds
+from DOSTU.utils.database import is_on_off
+from DOSTU.utils.formatters import time_to_seconds
 
 
 async def shell_cmd(cmd):
@@ -244,7 +244,7 @@ class YouTubeAPI:
 
         def audio_dl():
             ydl_optssx = {
-                "format": "bestaudio[ext=m4a]",
+                "format": "bestaudio/best",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
@@ -261,7 +261,7 @@ class YouTubeAPI:
 
         def video_dl():
             ydl_optssx = {
-                "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
+                "format": "(goodvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio/best)",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
